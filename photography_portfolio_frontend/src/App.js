@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Section from './Section.jsx';
+import './Section.css'; // This import is optional if Section.jsx already imports its CSS, but helpful for assurance.
+/*
+  To use the Section component elsewhere, import as:
+    import Section from './Section.jsx'
+*/
 // PUBLIC_INTERFACE
 function App() {
   const [theme, setTheme] = useState('light');
@@ -41,6 +46,8 @@ function App() {
         >
           Learn React
         </a>
+        {/* Portfolio main section */}
+        <Section />
       </header>
     </div>
   );
