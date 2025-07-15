@@ -1,0 +1,118 @@
+.section-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  width: 720px;
+  height: 311px;
+  background: transparent;
+  padding: 56px 60px 56px 60px;
+  /* counterAxisAlignItems: CENTER, layoutMode: VERTICAL, layoutWrap: NO_WRAP */
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 600px;
+  height: 156px;
+  padding: 5px;
+}
+
+.center-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 12px;
+  width: 337px;
+  height: 146px;
+}
+
+.main-heading {
+  color: #FC4308;
+  font-size: 2.2rem;
+  line-height: 1.15;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  /* Figma: 104px high, accurate for multiline title */
+  /* Remove outline, border, and background (transparent by default) */
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.subtext {
+  color: #FC4308;
+  font-size: 1rem;
+  line-height: 1.33;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  /* Figma: 30px high */
+}
+
+/* Action Button Area */
+.actions-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+  width: 60px;
+  height: 43px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 24px;
+}
+
+/* CTA Button styles from Figma 1:116 node */
+.cta-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: transparent;
+  color: #FC4308;
+  border: 0.5px solid #FC4308;
+  border-radius: 1.5px;
+  padding: 4px 8px 5px 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  height: 19px;
+  outline: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background: #fc43081a; /* subtle orange highlight, 10% opacity */
+}
+
+@media (max-width: 800px) {
+  .section-root {
+    width: 100vw;
+    min-width: unset;
+    padding: 32px 10vw;
+  }
+  .center-container {
+    width: 90vw;
+    min-width: unset;
+    padding: 2vw;
+  }
+  .center-frame {
+    width: 80vw;
+    min-width: unset;
+  }
+  .actions-wrap {
+    width: auto;
+    height: auto;
+  }
+}
